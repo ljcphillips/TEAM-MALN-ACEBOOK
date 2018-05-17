@@ -8,7 +8,7 @@
         <%= link_to('My Profile', user_path(current_user), method: :get) %>
       </li>
       <li>
-        <%= link_to('Users', user_index_path, method: :get) %>
+        <%= link_to('Users', users_path, method: :get) %>
       </li>
       <li>
         <%= link_to('Log Out', destroy_user_session_path, method: :delete) %>
@@ -22,7 +22,7 @@
   <h5>Hello <%= current_user.username %>. You are now signed in!</h5>
 
   <% @posts.each do |post| %>
-    <p style="max-width: 450px; min-width: 100px">@<%= User.find(post.user_id).username %> | <%= post.message %> | <%= post.created_at.strftime("%m/%d/%Y") %></p>
+    <p style="max-width: 450px; min-width: 100px">@<%= link_to(User.find(post.user_id).username, user_path(post.user_id), method: :get) %> | <%= post.message %> | <%= post.created_at.strftime("%m/%d/%Y") %></p>
     <p>
       Comments: <% post.comments.each do |comment| %>
         <ul>

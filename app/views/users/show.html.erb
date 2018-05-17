@@ -8,7 +8,7 @@
         <%= link_to('My Profile', user_path(current_user), method: :get) %>
       </li>
       <li>
-        <%= link_to('Users', user_index_path, method: :get) %>
+        <%= link_to('Users', users_path, method: :get) %>
       </li>
       <li>
         <%= link_to('Log Out', destroy_user_session_path, method: :delete) %>
@@ -18,7 +18,7 @@
 </nav>
 
 <div class="container-fluid">
-  <h5>Hello <%= current_user.username %>. You are now signed in!</h5>
+  <h5>Welcome to <%= @user.username %> Profile Page</h5>
 
   <ul class="list-group">
     <% @user_posts.each do |post| %>
