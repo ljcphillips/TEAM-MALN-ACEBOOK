@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   resources :posts do
     resources :comments
   end
-  resources :users
+  resources :users do
+    resources :messages
+  end
   root to: 'home#index'
 end

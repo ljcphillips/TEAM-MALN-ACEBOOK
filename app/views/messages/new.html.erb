@@ -18,15 +18,9 @@
 </nav>
 
 <div class="container-fluid">
-  <h5>Welcome to <%= @user.username %> profile page</h5>
-
-  <ul class="list-group">
-    <% @user_posts.each do |post| %>
-      <li class="list-group-item"><p style="max-width: 450px; min-width: 100px"><%= post.message %> | <%= post.created_at.strftime("%m/%d/%Y") %></p> </li>
+  <%= form_for @message do |form| %>
+    <p><%= form.label :message %></p>
+    <p><%= form.text_area(:message, rows: 4, cols: 80)%></p>
+    <p><%= form.submit "Submit" %></p>
   <% end %>
-  </ul>
 </div>
-
-<a>
-  <%= link_to('Post on wall', new_message_path(@user), method: :get) %>
-</a>
