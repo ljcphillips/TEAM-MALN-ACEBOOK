@@ -50,6 +50,19 @@ def third_user
   click_link 'Log Out'
 end
 
+def fourth_user
+  visit '/'
+  click_link 'Sign up'
+  fill_in 'Username', with: 'PeterParker'
+  fill_in 'First name', with: 'Peter'
+  fill_in 'Surname', with: 'Parker'
+  fill_in 'Email', with: 'spiderman@gmail.com'
+  fill_in 'Password', with: 'spider123'
+  fill_in 'Password confirmation', with: 'spider123'
+  click_button 'Sign up'
+  click_link 'Log Out'
+end
+
 def first_user_sign_in
   visit '/'
   fill_in 'Email', with: 'batman@gmail.com'
