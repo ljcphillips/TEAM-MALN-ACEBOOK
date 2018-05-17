@@ -71,6 +71,9 @@ Contributors:
 * North Bremicker [check github here](https://github.com/blarvin)
 * Mary Domashneva [check github here](https://github.com/MaryDomashneva)
 
+## Our team
+<img src="<img src="https://monosnap.com/image/vqGyj7S3jrxCGe2Yp2Fqf8lboTU6k8.png">" height=auto width="350" />
+
 Run project:
 -----
 
@@ -84,6 +87,9 @@ Run project:
 ```
 
 Result:
+-------
+
+Reflections:
 -------
 
 
