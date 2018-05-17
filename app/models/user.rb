@@ -10,4 +10,5 @@ class User < ApplicationRecord
   validates :username, uniqueness: true
 
   has_many :posts
+  acts_as_voter
 end
