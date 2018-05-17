@@ -74,7 +74,7 @@ Contributors:
 * Mary Domashneva [check github here](https://github.com/MaryDomashneva)
 
 ## Our team
-<img src="https://monosnap.com/image/vqGyj7S3jrxCGe2Yp2Fqf8lboTU6k8.png">"
+<img src="https://monosnap.com/image/vqGyj7S3jrxCGe2Yp2Fqf8lboTU6k8.png">
 
 Run project:
 -----
@@ -102,7 +102,7 @@ Our app has following controllers:
 
 For now, our controllers contain all responsible code. Following convention, we would like to have kept our controllers as skinny as possible, moving all of our code to our models. Unfortunately, we did not have enough time for that. We are planning to come back to it at a later date.
 
-For these two weeks we were able to implement following features:
+### For these two weeks we were able to implement following features:
 * Authentication. In order to use our app users have to sign_up and then sign_in.
 * Posts. Users can make posts and see all other users post on a main page. Also, users can see the author of the post and date.
 * Comments. Users can leave comments on each others posts.
@@ -114,40 +114,43 @@ Reflections:
 -------
 
 We had two weeks for the project. It was the first time any of us had used Rails to build a project.
-Inside our team we agreed to have some grounds rules for the two weeks:
-## Stand-up's at 10:00 am every day:
+
+### Inside our team we agreed to have some grounds rules for the two weeks:
+1. Stand-up's at 10:00 am every day:
 * Discuss the scope of work for the day,
 * Reallocate tickets if necessary and
 * Merge pull requests.
-## Retro at 17:00 everyday:
+2. Retro at 17:00 everyday:
 * Discuss worked completed and
 * Reflect on what went well and what didn't go so well.
-## Switching PM everyday.
-## Work in pairs.
+3. Switching PM everyday.
+4. Work in pairs.
 
-Week one:
+## Week one:
 
 We spent all week focusing on our environment setup. By environment we mean:
-Set-up Travis
-Set-up Heroku
-Set-up Docker and deploy the Heroku using Docker.
+* Set-up Travis
+* Set-up Heroku
+* Set-up Docker and deploy the Heroku using Docker.
+
 Initially, we anticipated that this process would not take too long to complete however, we ended up spending the whole week trying to understand how Rails works and build the environment on top.
+
 You can read about our difficulties and how we overcame them here:
 
-Week two:
+## Week two:
 
 Week two was splitted between two ‘two-day sprints’. That means that on Monday we had 30 minutes to define the scope of work for our first 'two-day sprint'.
 
-We used Trello as task manager and we used the following techniques to work with our tickets:
+### We used Trello as task manager and we used the following techniques to work with our tickets:
 
-Label tickets in title with the complexity level from 1 to 5, based on our expectations.
-Label tickets with different colours to define different areas of work, e.g yellow - set up environment, purple - tests, green - implementation features.
-Allocate team members to the tickets, based on team members expectations, everyone was able to choose the ticket that he/she wanted to work with.
-Moved tickets through the process: to-do (all tickets for two days) → in progress(currently working on) → blocked(something that we were stuck with )→ in review (tickets at pull request stage) → done (merge to master stage).
+* Label tickets in title with the complexity level from 1 to 5, based on our expectations.
+* Label tickets with different colours to define different areas of work, e.g yellow - set up environment, purple - tests, green - implementation features.
+* Allocate team members to the tickets, based on team members expectations, everyone was able to choose the ticket that he/she wanted to work with.
+* Moved tickets through the process: to-do (all tickets for two days) → in progress(currently working on) → blocked(something that we were stuck with )→ in review (tickets at pull request stage) → done (merge to master stage).
 
 ### As a result of the two weeks we can state the following:
 
-## Learnings:
+#### Learnings:
 * Rails helper methods
 * Not to get stuck with anything for too long. Ask for help: coaches/colleagues
 * How to organise the process of creating a project
@@ -155,12 +158,12 @@ Moved tickets through the process: to-do (all tickets for two days) → in progr
 * Take breaks
 
 
-## Difficulties:
+#### Difficulties:
 * Lack of organisation during week #1
 * Feeling that we do not have enough knowledge
 * Environment set up took a long time to sort
 
-## Positives: 
+#### Positives: 
 Good division of labour
 Feeling that you can rely on your team
 Feeling that we've learnt a lot
