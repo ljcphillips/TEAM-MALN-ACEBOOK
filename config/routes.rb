@@ -3,8 +3,11 @@
 Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
   resources :posts do
-    resources :comments
-    resources :likes
+     member do
+      put "like", to: "posts#upvote"
+      put 'unlike', to: "posts#unvote"
+     end
+     resources :comments
   end
   resources :users
 
