@@ -7,6 +7,18 @@
 ACEBOOK challenge
 =================
 
+[Check project online](http://guardians_news_summary_challenge.surge.sh/)
+
+Repository:
+-------
+
+* https://github.com/blarvin/TEAM-MALN-ACEBOOK
+
+Card Wall:
+-------
+
+* https://trello.com/b/Lvz1moG1/acebook-dapper-penguins
+
 Task:
 -------
 The purpose of the progect is to write a clone of Facebok.
@@ -49,16 +61,30 @@ Technologies used:
 * Rubocop
 * PRY
 * Simplecov
+* Acts As Votable
 
 
 Contributors:
 -------
+* Lorraine Phillips [check github here](https://github.com/ljcphillips)
+* Andrew Kemp [check github here](https://github.com/andyk144)
+* North Bremicker [check github here](https://github.com/blarvin)
+* Mary Domashneva [check github here](https://github.com/MaryDomashneva)
 
 Run project:
 -----
 
+```bash
+> bundle install
+> bin/rails db:create
+> bin/rails db:migrate
+
+> bundle exec rspec # Run the tests to ensure it works
+> bin/rails server # Start the server at localhost:3000
+```
 
 Result:
 -------
+
 
 
