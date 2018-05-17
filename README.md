@@ -7,7 +7,7 @@
 ACEBOOK challenge
 =================
 
-[Check project online](http://guardians_news_summary_challenge.surge.sh/)
+[Check project online](https://maln-acebook.herokuapp.com/users/sign_in)
 
 Repository:
 -------
