@@ -23,10 +23,13 @@
   <ul class="list-group">
     <% @user_posts.each do |post| %>
       <li class="list-group-item"><p style="max-width: 450px; min-width: 100px"><%= post.message %> | <%= post.created_at.strftime("%m/%d/%Y") %></p> </li>
-  <% end %>
+    <% end %>
+    <% @user_messages.each do |message| %>
+      <li class="list-group-item"><p style="max-width: 450px; min-width: 100px">@<%= message.author.username %> | <%= message.message %> | <%= message.created_at.strftime("%m/%d/%Y") %></p> </li>
+    <% end %>
   </ul>
 </div>
 
 <a>
-  <%= link_to('Post on wall', new_message_path(@user), method: :get) %>
+  <%= link_to('Post on wall', new_user_message_path(@user), method: :get) %>
 </a>
