@@ -17,8 +17,14 @@ RSpec.feature 'Timeline', type: :feature do
 
   scenario "Can click 'like' " do
     visit '/posts'
-    click_button 'like'
+    click_link 'like'
     expect(page).to have_content('Likes: 1')
+  end
+
+  scenario "Can click 'unlike' " do
+    visit '/posts'
+    click_link 'unlike'
+    expect(page).to have_content('Likes: 0')
   end
 
   # scenario "Can see 'likes' by posts that have been liked" do
