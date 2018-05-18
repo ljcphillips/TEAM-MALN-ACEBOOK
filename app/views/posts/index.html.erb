@@ -21,14 +21,13 @@
 
   <h5>Hello <%= current_user.username %>. You are now signed in!</h5>
 
-
   <% @posts.each do |post| %>
     <p style="max-width: 450px; min-width: 100px">@<%= link_to(User.find(post.user_id).username, user_path(post.user_id), method: :get) %> | <%= post.message %> | <%= post.created_at.strftime("%m/%d/%Y") %></p>
     <p>
       Comments: <% post.comments.each do |comment| %>
-        <ul>
-          <li><%=comment.content%></li>
-        </ul>
+         <ul>
+           <li>@<%= User.find(comment.user_id).username %> | <%=comment.content%> | <%= comment.created_at.strftime("%m/%d/%Y") %></li>
+         </ul>
       <% end %>
     </p>
 
