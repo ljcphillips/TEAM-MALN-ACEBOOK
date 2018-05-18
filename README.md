@@ -135,7 +135,7 @@ We spent all week focusing on our environment setup. By environment we mean:
 
 Initially, we anticipated that this process would not take too long to complete however, we ended up spending the whole week trying to understand how Rails works and build the environment on top.
 
-You can read about our difficulties and how we overcame them here:
+You can read about our difficulties and how we overcame them [here](https://github.com/MaryDomashneva/Environment-set-up-Travis-Heroku_Docker/blob/master/README.md)
 
 ## Week two:
 
