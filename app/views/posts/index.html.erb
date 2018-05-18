@@ -31,28 +31,23 @@
       <% end %>
     </p>
 
-    <div class="form-group">
-      <% comment = post.comments.build %>
-        <%= form_for [post, comment], :url => post_comments_path(post) do |comment_fields| %>
-                <%= comment_fields.text_area :content, placeholder: "Write a comment..." %>
-                <br>
-                <%= comment_fields.submit "Comment" %>
-        <% end %>
+    <%= link_to like_post_path(post), id: 'like', class: "btn btn-default btn-md", method: :put do %>
+      <span class="glyphicon glyphicon-thumbs-up"></span> Likes:
+      <%= post.get_upvotes.size %>
+    <% end %>
+    <%= link_to unlike_post_path(post), id: 'unlike', class: "btn btn-default btn-md", method: :put do %>
+      <span class="glyphicon glyphicon-thumbs-down"></span> Unlike:
+    <% end %>
+
+    <% comment = post.comments.build %>
+      <%= form_for [post, comment], :url => post_comments_path(post) do |comment_fields| %>
+        <%= comment_fields.text_area :content, placeholder: "Write a comment..." %>
+        <%= comment_fields.submit "Comment" %>
       <% end %>
-    </div>
+  <% end %>
 
   <a>
     <%= link_to new_post_path do %>
       New post
     <% end %>
   </a>
-
-</div>
-    <%= link_to like_post_path(post), id: 'like', class: "btn btn-default btn-sm", method: :put do %>
-      <span class="glyphicon glyphicon-thumbs-up"></span> Likes:
-      <%= post.get_upvotes.size %>
-    <% end %>
-    <%= link_to unlike_post_path(post), id: 'unlike', class: "btn btn-default btn-sm", method: :put do %>
-      <span class="glyphicon glyphicon-thumbs-down"></span> Unlike:
-    <% end %>
-</div>
