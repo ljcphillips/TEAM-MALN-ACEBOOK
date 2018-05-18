@@ -49,11 +49,10 @@
 
 </div>
     <%= link_to like_post_path(post), id: 'like', class: "btn btn-default btn-sm", method: :put do %>
-    <span class="glyphicon glyphicon-thumbs-up"></span> Likes:
-    <%= post.get_upvotes.size %>
+      <span class="glyphicon glyphicon-thumbs-up"></span> Likes:
+      <%= post.get_upvotes.size %>
     <% end %>
     <%= link_to unlike_post_path(post), id: 'unlike', class: "btn btn-default btn-sm", method: :put do %>
-    <span class="glyphicon glyphicon-thumbs-down"></span> Unlike:
+      <span class="glyphicon glyphicon-thumbs-down"></span> Unlike:
     <% end %>
-  <% end %>
 </div>
