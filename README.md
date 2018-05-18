@@ -164,6 +164,6 @@ Week two was splitted between two ‘two-day sprints’. That means that on Mond
 * Environment set up took a long time to sort
 
 #### Positives: 
-Good division of labour
-Feeling that you can rely on your team
-Feeling that we've learnt a lot
+* Good division of labour
+* Feeling that you can rely on your team
+* Feeling that we've learnt a lot
