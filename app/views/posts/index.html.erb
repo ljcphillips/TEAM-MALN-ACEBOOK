@@ -17,7 +17,14 @@
 <h5>Hello <%= current_user.username %>. You are now signed in!</h5>
 
 <% @posts.each do |post| %>
+<br>
   <p style="max-width: 450px; min-width: 100px">@<%= User.find(post.user_id).username %> | <%= post.message %> | <%= post.created_at.strftime("%m/%d/%Y") %></p>
+  <p><% post.comments.each do |comment| %>
+  <ul>
+    <li><%=comment.content%></li>
+  </ul>
+  <% end %>
+  </p>
   <%= link_to like_post_path(post), id: 'like', class: "btn btn-default btn-md", method: :put do %>
   <span class="glyphicon glyphicon-thumbs-up"></span> Likes:
   <%= post.get_upvotes.size %>
@@ -30,17 +37,9 @@
     <%= comment_fields.text_area :content, size: "30x1", class: "btn btn-default btn-md", placeholder: "Write a comment..." %>
     <%= comment_fields.submit "Add", class: "btn btn-default btn-md" %>
   <% end %>
-
-  <p><% post.comments.each do |comment| %>
-  <ul>
-    <li><%=comment.content%></li>
-  </ul>
   <% end %>
-  </p>
-
-
-  <% end %>
-
+<br>
+<br>
 <a><%= link_to new_post_path do %>
   New post
 <% end %>
