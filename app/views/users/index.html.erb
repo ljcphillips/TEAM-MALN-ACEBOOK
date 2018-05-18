@@ -1,0 +1,25 @@
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/posts">AceBook</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li>
+        <%= link_to('My Profile', user_path(current_user), method: :get) %>
+      </li>
+      <li>
+        <%= link_to('Log Out', destroy_user_session_path, method: :delete) %>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container-fluid">
+  <h5>Here listed all residents of Marvel_land</h5>
+
+  <ul class="list-group">
+    <% @users.each do |user| %>
+      <li> <%= link_to(user.username, user_path(user), method: :get) %> </li>
+  <% end %>
+  </ul>
+</div>

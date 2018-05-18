@@ -1,13 +1,17 @@
+# frozen_string_literal: true
+
+# defines posts and thier routes
 class PostsController < ApplicationController
-  require 'pry'
+  # require 'pry'
   before_action :authenticate_user!
 
   def index
-    @posts = Post.all
+    @posts = Post.all.order('updated_at DESC')
   end
 
   def new
-    #build doesn't save to DB like new doesn't. For saving we need to use create
+    # build doesn't save to DB like new doesn't. For saving
+    # we need to use create
     @post = current_user.posts.build
   end
 
@@ -17,6 +21,17 @@ class PostsController < ApplicationController
     redirect_to posts_url
   end
 
+  def upvote
+    @post = Post.find(params[:id])
+    @post.liked_by current_user
+    redirect_to posts_url
+  end
+
+  def unvote
+    @post = Post.find(params[:id])
+    @post.unliked_by current_user
+    redirect_to posts_url
+  end
 
   private
 

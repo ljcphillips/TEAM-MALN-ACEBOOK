@@ -1,7 +1,16 @@
-Rails.application.routes.draw do
+# frozen_string_literal: true
 
-  devise_for :users
-  resources :posts
-  resources :users
-  root to: "home#index"
+Rails.application.routes.draw do
+  devise_for :users, controllers: { registrations: 'registrations' }
+  resources :posts do
+     member do
+      put "like", to: "posts#upvote"
+      put 'unlike', to: "posts#unvote"
+     end
+     resources :comments
+  end
+  resources :users do
+    resources :messages
+  end
+  root to: 'home#index'
 end

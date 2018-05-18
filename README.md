@@ -167,7 +167,3 @@ Week two was splitted between two ‘two-day sprints’. That means that on Mond
 Good division of labour
 Feeling that you can rely on your team
 Feeling that we've learnt a lot
-
-
-
-
