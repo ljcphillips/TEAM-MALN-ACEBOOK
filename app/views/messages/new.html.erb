@@ -18,7 +18,8 @@
 </nav>
 
 <div class="container-fluid">
-  <%= form_for @post do |form| %>
+  <%= form_for [@user, @message] do |form| %>
+    <%= form.hidden_field :recipient_user_id, value: @user.id %>
     <p><%= form.label :message %></p>
     <p><%= form.text_area(:message, rows: 4, cols: 80)%></p>
     <p><%= form.submit "Submit" %></p>
