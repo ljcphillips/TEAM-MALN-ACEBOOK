@@ -14,7 +14,7 @@ RSpec.feature 'Timeline', type: :feature do
     click_button 'Log in'
     visit '/posts'
     fill_in 'comment[content]', with: 'my first comment!'
-    click_button 'Comment'
+    click_button 'Add'
     expect(page).to have_content('my first comment!')
   end
 end
