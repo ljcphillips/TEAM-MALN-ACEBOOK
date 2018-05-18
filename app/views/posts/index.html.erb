@@ -41,7 +41,7 @@
     <% comment = post.comments.build %>
       <%= form_for [post, comment], :url => post_comments_path(post) do |comment_fields| %>
         <%= comment_fields.text_area :content, placeholder: "Write a comment..." %>
-        <%= comment_fields.submit "Comment" %>
+        <%= comment_fields.submit "Add" %>
       <% end %>
   <% end %>
 
