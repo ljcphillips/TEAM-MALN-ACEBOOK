@@ -58,11 +58,4 @@ ActiveRecord::Schema.define(version: 20180517203530) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  create_table "wall_messages", force: :cascade do |t|
-    t.string "message"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.integer "user_id"
-  end
-
 end

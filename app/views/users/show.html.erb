@@ -25,7 +25,7 @@
       <li class="list-group-item"><p style="max-width: 450px; min-width: 100px"><%= post.message %> | <%= post.created_at.strftime("%m/%d/%Y") %></p> </li>
     <% end %>
     <% @user_messages.each do |message| %>
-      <li class="list-group-item"><p style="max-width: 450px; min-width: 100px">@<%= message.author.username %> | <%= message.message %> | <%= message.created_at.strftime("%m/%d/%Y") %></p> </li>
+      <li class="list-group-item"><p style="max-width: 450px; min-width: 100px">@<%= link_to(message.author.username, user_path(user), method: :get) %> | <%= message.message %> | <%= message.created_at.strftime("%m/%d/%Y") %></p></li>
     <% end %>
   </ul>
 </div>
