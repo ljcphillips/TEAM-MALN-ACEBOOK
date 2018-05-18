@@ -17,34 +17,29 @@
 <h5>Hello <%= current_user.username %>. You are now signed in!</h5>
 
 <% @posts.each do |post| %>
-  <!-- <p><%= post.created_at.strftime("%m/%d/%Y" + ": ") %><%= post.message %></p>
-  <p style="max-width: 450px; min-width: 100px"><%= post.message %></p> <%= post.created_at.strftime("%m/%d/%Y") %> </p> -->
+<br>
   <p style="max-width: 450px; min-width: 100px">@<%= User.find(post.user_id).username %> | <%= post.message %> | <%= post.created_at.strftime("%m/%d/%Y") %></p>
-  <p>Comments: <% post.comments.each do |comment| %>
+  <p><% post.comments.each do |comment| %>
   <ul>
     <li>@<%= User.find(comment.user_id).username %> | <%=comment.content%> | <%= comment.created_at.strftime("%m/%d/%Y") %></li>
   </ul>
   <% end %>
   </p>
-  <div class="form-group">
-    <% comment = post.comments.build %>
-    <%= form_for [post, comment], :url => post_comments_path(post) do |comment_fields| %>
-
-            <%= comment_fields.text_area :content, placeholder: "Write a comment..." %>
-            <br>
-            <%= comment_fields.submit "Comment" %>
-
-    <% end %>
-  </div>
-    <%= link_to like_post_path(post), id: 'like', class: "btn btn-default btn-sm", method: :put do %>
-    <span class="glyphicon glyphicon-thumbs-up"></span> Likes:
-    <%= post.get_upvotes.size %>
-    <% end %>
-    <%= link_to unlike_post_path(post), id: 'unlike', class: "btn btn-default btn-sm", method: :put do %>
-    <span class="glyphicon glyphicon-thumbs-down"></span> Unlike:
-    <% end %>
+  <%= link_to like_post_path(post), id: 'like', class: "btn btn-default btn-md", method: :put do %>
+  <span class="glyphicon glyphicon-thumbs-up"></span> Likes:
+  <%= post.get_upvotes.size %>
   <% end %>
-
+  <%= link_to unlike_post_path(post), id: 'unlike', class: "btn btn-default btn-md", method: :put do %>
+  <span class="glyphicon glyphicon-thumbs-down"></span> Unlike:
+  <% end %>
+  <% comment = post.comments.build %>
+  <%= form_for [post, comment], :url => post_comments_path(post) do |comment_fields| %>
+    <%= comment_fields.text_area :content, size: "30x1", class: "btn btn-default btn-md", placeholder: "Write a comment..." %>
+    <%= comment_fields.submit "Add", class: "btn btn-default btn-md" %>
+  <% end %>
+  <% end %>
+<br>
+<br>
 <a><%= link_to new_post_path do %>
   New post
 <% end %>
