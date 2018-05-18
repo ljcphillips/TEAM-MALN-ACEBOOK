@@ -40,6 +40,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Authentication generator
 gem 'devise'
+gem 'acts_as_votable', '~> 0.11.1'
 
 # Warden for rspec
 gem 'rails_warden'

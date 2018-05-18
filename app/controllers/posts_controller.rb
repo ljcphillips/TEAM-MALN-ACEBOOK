@@ -21,6 +21,18 @@ class PostsController < ApplicationController
     redirect_to posts_url
   end
 
+  def upvote
+    @post = Post.find(params[:id])
+    @post.liked_by current_user
+    redirect_to posts_url
+  end
+
+  def unvote
+    @post = Post.find(params[:id])
+    @post.unliked_by current_user
+    redirect_to posts_url
+  end
+
   private
 
   def post_params
