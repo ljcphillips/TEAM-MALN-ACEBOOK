@@ -21,6 +21,7 @@
   <h5>Hello <%= current_user.username %>. You are now signed in!</h5>
 
   <% @posts.each do |post| %>
+    <div class = "container-fluid">
     <p style="max-width: 450px; min-width: 100px">@<%= link_to(User.find(post.user_id).username, user_path(post.user_id), method: :get) %> | <%= post.message %> | <%= post.created_at.strftime("%m/%d/%Y") %></p>
     <p>
       Comments: <% post.comments.each do |comment| %>
@@ -40,11 +41,11 @@
 
     <% comment = post.comments.build %>
       <%= form_for [post, comment], :url => post_comments_path(post) do |comment_fields| %>
-        <%= comment_fields.text_area :content, placeholder: "Write a comment..." %>
-        <%= comment_fields.submit "Add" %>
+        <%= comment_fields.text_area :content, size: "30x1", class: "btn btn-default btn-md", placeholder: "Write a comment..." %>
+        <%= comment_fields.submit "Add", class: "btn btn-default btn-md" %>
       <% end %>
   <% end %>
-
+  <div>
   <a>
     <%= link_to new_post_path do %>
       New post
