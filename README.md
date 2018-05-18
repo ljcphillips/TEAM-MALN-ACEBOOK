@@ -139,7 +139,7 @@ You can read about our difficulties and how we overcame them [here](https://gith
 
 ## Week two:
 
-Week two was splitted between two ‘two-day sprints’. That means that on Monday we had 30 minutes to define the scope of work for our first 'two-day sprint'.
+Week two was split between two ‘two-day sprints’. That means that on Monday we had 30 minutes to define the scope of work for our first 'two-day sprint'.
 
 ### We used Trello as task manager and we used the following techniques to work with our tickets:
 
@@ -164,6 +164,6 @@ Week two was splitted between two ‘two-day sprints’. That means that on Mond
 * Environment set up took a long time to sort
 
 #### Positives: 
-Good division of labour
-Feeling that you can rely on your team
-Feeling that we've learnt a lot
+* Good division of labour
+* Feeling that you can rely on your team
+* Feeling that we've learnt a lot
