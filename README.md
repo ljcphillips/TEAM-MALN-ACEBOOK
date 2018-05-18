@@ -139,7 +139,7 @@ You can read about our difficulties and how we overcame them [here](https://gith
 
 ## Week two:
 
-Week two was splitted between two ‘two-day sprints’. That means that on Monday we had 30 minutes to define the scope of work for our first 'two-day sprint'.
+Week two was split between two ‘two-day sprints’. That means that on Monday we had 30 minutes to define the scope of work for our first 'two-day sprint'.
 
 ### We used Trello as task manager and we used the following techniques to work with our tickets:
 
